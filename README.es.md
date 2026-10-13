@@ -46,7 +46,7 @@ Mission Control muestra todas tus ventanas abiertas de un vistazo, pero para ele
 3. **Presiona <kbd>Enter ↩</kbd>**: Mission Control se cierra y esa ventana exacta pasa al frente.
 4. **O presiona <kbd>⌘</kbd> + un número**: <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> manda la ventana seleccionada a ese escritorio y, si no existe, lo crea. Mission Control sigue abierto, así sigues ordenando.
 
-Tabby no reemplaza Mission Control ni dibuja su propio selector: funciona encima del nativo.
+Tabby no reemplaza Mission Control: funciona encima del nativo. Fuera de Mission Control, también toma <kbd>⌘</kbd><kbd>Tab</kbd> para mostrar todas tus ventanas una por una, como en Windows, incluidas las minimizadas y las de otros escritorios, y <kbd>⌘</kbd><kbd>Q</kbd> cierra solo la ventana seleccionada. Esa parte se puede desactivar en Settings.
 
 ## Funciones
 
@@ -56,6 +56,7 @@ Tabby no reemplaza Mission Control ni dibuja su propio selector: funciona encima
 | 🎯 **La ventana exacta** | Enfoca la ventana que elegiste, aunque haya varias de la misma app. |
 | ✨ **Sabes dónde estás** | La ventana seleccionada se levanta un poco con un resorte suave y vuelve a su lugar al pasar a otra. |
 | 🗂️ **Mándala a un escritorio** | <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> mueve la ventana seleccionada a ese escritorio y, si todavía no existe, lo crea. |
+| 🪟 **⌘Tab, ventana por ventana** | El selector de apps de Tabby muestra ventanas, no apps. Mantén ⌘, presiona Tab, suelta para cambiar. <kbd>⌘</kbd><kbd>Q</kbd> cierra solo la ventana seleccionada. Desactívalo en Settings si prefieres el estándar. |
 | ⚙️ **Tus atajos** | Cambia cualquier atajo en **Settings**. |
 | 🪄 **Como sea que lo abras** | Atajo, F3, gesto o esquina activa: Tabby no depende de ninguno. |
 | 🍎 **Nativa** | Swift, SwiftUI y AppKit. Una app mínima en la barra de menús que no estorba. |
@@ -103,7 +104,7 @@ Tabby se abre, su ícono aparece en la barra de menús y una bienvenida corta te
 
 macOS exige el permiso de Accesibilidad a las apps que detectan Mission Control, leen información de las ventanas y enfocan ventanas de otras apps. Tabby lo usa solo para eso:
 
-- Solo escucha el teclado mientras Mission Control está abierto.
+- Solo escucha el teclado mientras Mission Control está abierto, más ⌘Tab (y las teclas que le siguen) mientras el selector de ventanas está activado.
 - Nunca guarda ni envía lo que escribes.
 - No tiene analíticas ni cuentas. Lo único que hace por red es buscar versiones nuevas: al abrirse y cada 12 horas lee la última versión publicada en GitHub. No se envía nada sobre ti, y se puede desactivar en Settings.
 - **Grabación de pantalla es opcional** y solo se usa para el efecto de agrandar. Tabby captura las ventanas de la pantalla actual mientras Mission Control está abierto, guarda las imágenes en memoria y las descarta al cerrarlo. No se guarda ni se envía nada. Sin ese permiso, Tabby funciona igual con un recuadro simple.

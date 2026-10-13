@@ -46,7 +46,7 @@ Mission Control shows all your open windows at a glance, but choosing one still 
 3. **Press <kbd>Return ↩</kbd>**: Mission Control closes and that exact window comes to the front.
 4. **Or press <kbd>⌘</kbd> + a number**: <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> sends the selected window to that desktop, creating it if it doesn't exist yet. Mission Control stays open, so you can keep sorting.
 
-Tabby doesn't replace Mission Control or draw its own switcher. It works on top of the native one.
+Tabby doesn't replace Mission Control: it works on top of the native one. Outside Mission Control, it also takes over <kbd>⌘</kbd><kbd>Tab</kbd> to show every window one by one, like Windows does, including minimized ones and windows on other desktops, with <kbd>⌘</kbd><kbd>Q</kbd> closing just the selected window. You can turn that part off in Settings.
 
 ## Features
 
@@ -56,6 +56,7 @@ Tabby doesn't replace Mission Control or draw its own switcher. It works on top 
 | 🎯 **The exact window** | Focuses the window you picked, even when several windows belong to the same app. |
 | ✨ **See where you are** | The selected window lifts slightly with a soft spring and settles back when you move on. |
 | 🗂️ **Send it to a desktop** | <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> moves the selected window to that desktop, creating it if it doesn't exist yet. |
+| 🪟 **⌘Tab, window by window** | Tabby's app switcher lists windows, not apps. Hold ⌘, press Tab, release to switch. <kbd>⌘</kbd><kbd>Q</kbd> closes just the selected window. Turn it off in Settings if you prefer the standard one. |
 | ⚙️ **Your shortcuts** | Change every shortcut in Settings. |
 | 🪄 **However you open it** | Shortcut, F3, trackpad gesture or hot corner: Tabby doesn't depend on any of them. |
 | 🍎 **Native** | Swift, SwiftUI and AppKit. A tiny menu bar app that stays out of your way. |
@@ -103,7 +104,7 @@ Tabby opens, its icon appears in the menu bar, and a short welcome tour guides y
 
 macOS requires Accessibility permission for apps that detect Mission Control, read window information and focus windows that belong to other apps. Tabby uses it for exactly that:
 
-- It only listens to the keyboard while Mission Control is open.
+- It only listens to the keyboard while Mission Control is open, plus ⌘Tab (and the keys that follow it) while the window switcher is on.
 - It never records or sends what you type.
 - It has no analytics and no accounts. Its only network request is a check for new versions: when it starts and every 12 hours it reads the latest release from GitHub. Nothing about you is sent, and you can turn it off in Settings.
 - **Screen Recording is optional** and only powers the lift effect. Tabby captures the windows of the current display while Mission Control is open, keeps the images in memory and drops them when it closes. Nothing is saved or sent. Without it, Tabby works the same with a plain highlight.
