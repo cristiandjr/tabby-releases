@@ -68,7 +68,7 @@ Tabby no reemplaza Mission Control: funciona encima del nativo. Fuera de Mission
 - [x] **Spike 0:** validar las capacidades de macOS que necesita Tabby
 - [x] **Mission Control con el teclado:** Tab, ⇧Tab y Enter, efecto de agrandar, cambio de escritorio, Configuración y bienvenida
 - [x] **Mover la ventana seleccionada a otro escritorio** con ⌘1…⌘9
-- [x] **⌘Tab ventana por ventana**, con ⌘Q cerrando solo la ventana seleccionada (0.1.0-alpha.6)
+- [x] **⌘Tab ventana por ventana**, con ⌘Q cerrando solo la ventana seleccionada (0.1.0-alpha.7)
 - [x] **Mover a Aplicaciones** desde la bienvenida (0.1.0-alpha.6)
 - [ ] **v0.1.0:** primera versión estable, después de una ronda de uso real
 - [ ] Navegación con flechas según la posición de las miniaturas
@@ -91,17 +91,38 @@ Tabby es gratis y no está notarizada por Apple, porque eso requiere una cuenta 
 2. Abre **Configuración del Sistema → Privacidad y seguridad** y baja hasta **Seguridad**. Vas a ver *Se bloqueó "Tabby" para proteger tu Mac.*
 3. Haz clic en **Abrir de todos modos**.
 4. macOS vuelve a preguntar: haz clic en **Abrir de todos modos**.
-5. Escribe tu contraseña o usa Touch ID. Si no aparece ningún pedido, mira tu otra pantalla: a veces se abre ahí.
+5. Escribe tu contraseña o usa Touch ID. **En una Mac con Touch ID, apoya el dedo en el sensor aunque no veas ningún diálogo:** el pedido puede esperar en silencio, sobre todo con un monitor externo. Si no, mira tu otra pantalla.
 6. **Si el ícono de Tabby no aparece en la barra de menús después de unos segundos, cierra la copia trabada y vuelve a abrir Tabby.** La copia que abriste antes de aprobar queda congelada, y macOS manda cada doble clic nuevo a esa copia. Abre el **Monitor de Actividad**, selecciona **Tabby**, haz clic en **ⓧ** → **Forzar salida**, y abre Tabby otra vez. Tu aprobación ya quedó guardada, así que esta vez arranca al instante. (Terminal: `pkill -9 Tabby; open ~/Downloads/Tabby.app`.)
 
 Tabby se abre, su ícono aparece en la barra de menús y una bienvenida corta te guía con el permiso de **Accesibilidad** y una primera prueba. Esto se hace una sola vez, aunque una versión nueva descargada de internet puede volver a pedirlo.
 
-### Si Tabby sigue sin abrir
+## Problemas frecuentes
 
-- **No pasa nada después de «Abrir de todos modos»:** el pedido de contraseña o Touch ID puede estar esperando en otra pantalla o en otro escritorio. Abre Mission Control para encontrarlo.
-- **Haces doble clic en Tabby y no pasa nada:** hay una copia trabada esperando esa aprobación. Fuérzala a salir como en el paso 6 y vuelve a abrir Tabby. Si macOS la vuelve a bloquear, repite los pasos de arriba una vez más.
-- **No aparece «Abrir de todos modos»:** el botón solo está durante una hora, más o menos, después de que macOS bloquea Tabby. Vuelve a abrir Tabby para que macOS la bloquee y entra otra vez a **Privacidad y seguridad**.
-- **Tienes varias copias de Tabby:** deja solo la de **Aplicaciones** y borra las demás, también el zip, así siempre abres la misma.
+**macOS dice que no pudo verificar Tabby.** Es lo esperable: Tabby no está notarizada por Apple. Haz clic en **Listo** y sigue los pasos de arriba (Privacidad y seguridad → Abrir de todos modos).
+
+**Hice clic en «Abrir de todos modos» y no pasa nada. El Monitor de Actividad muestra a Tabby con 0 % de CPU.** macOS está esperando tu aprobación y el pedido puede ser silencioso: en una Mac con Touch ID, apoya el dedo en el sensor; con un monitor externo, mira la otra pantalla. Si sigue trabada, la copia que abriste antes de aprobar quedó congelada: fuerza la salida de Tabby en el **Monitor de Actividad** y ábrela otra vez; tu aprobación ya quedó guardada. En la Terminal: `pkill -9 Tabby; open ~/Downloads/Tabby.app`. Si aun así no arranca, el propio servicio de Gatekeeper se trabó: ejecuta `sudo killall syspolicyd` en la Terminal y abre Tabby de nuevo.
+
+**Hago doble clic en Tabby y no pasa nada.** Misma causa: una copia congelada se queda con cada clic. Fuérzala a salir y abre Tabby otra vez.
+
+**No aparece «Abrir de todos modos».** El botón está solo durante una hora, más o menos, después de que macOS bloquea Tabby. Vuelve a abrir Tabby para que macOS la bloquee y entra otra vez a Privacidad y seguridad.
+
+**Tabby está en la barra de menús, pero en Mission Control no pasa nada.** Tabby necesita el permiso de Accesibilidad. **Settings → General** muestra si está concedido; concédelo en **Configuración del Sistema → Privacidad y seguridad → Accesibilidad**. Si Tabby figura ahí y aun así no funciona (pasa al reemplazar la app), apaga y vuelve a encender su interruptor. **Diagnostics…** en el menú muestra exactamente qué ve Tabby.
+
+**⌘Tab sigue mostrando el selector de apps estándar.** Revisa que **Settings → General → «⌘Tab shows windows, not apps»** esté activado, que Tabby esté habilitada y que tenga Accesibilidad (el selector usa el mismo acceso al teclado que Mission Control). Dentro de Mission Control, ⌘Tab sigue siendo nativo a propósito. En campos de contraseña (Secure Input) macOS bloquea cualquier herramienta de teclado, Tabby incluida.
+
+**La ventana seleccionada no se agranda, o ⌘Tab muestra íconos en vez de miniaturas.** Las dos cosas necesitan el permiso opcional de Grabación de pantalla: **Settings → General → Allow Screen Recording**. Sin él, Tabby funciona con un recuadro simple e íconos de app.
+
+**«Launch at login» aparece deshabilitado.** Tabby está corriendo desde Descargas u otra carpeta. Usa **Settings → General → Move to Applications**, o arrastra Tabby.app a Aplicaciones con el Finder y ábrela otra vez.
+
+**⌘1…⌘9 dice que la ventana está en todos los escritorios.** Esa app está asignada a todos los escritorios en macOS: clic derecho en su ícono del Dock → **Opciones → Asignar a → Ninguno**.
+
+**Cambié de escritorio dentro de Mission Control y la lista se vio mal un instante.** Tabby espera a que macOS termine el cambio (alrededor de un segundo) antes de rearmar la lista; las teclas que presiones mientras tanto se aplican cuando está lista. Si queda mal, abre un issue con el reporte de Diagnóstico.
+
+**Tabby pidió aprobación otra vez después de una actualización.** Cada descarga pasa por Gatekeeper una vez. Los permisos se conservan, porque todas las versiones van firmadas con el mismo certificado. En una Mac que nunca muestra el pedido de aprobación, puedes saltar Gatekeeper para la copia nueva antes de abrirla: `find ~/Downloads/Tabby.app -print0 | xargs -0 xattr -d com.apple.quarantine`.
+
+**Tienes varias copias de Tabby.** Deja solo la de Aplicaciones y borra las demás, también el zip, así siempre abres la misma.
+
+**¿Cómo reporto un problema?** **Diagnostics…** en el menú → **Copy Report** → pégalo en un [issue nuevo](../../issues/new). El reporte no tiene títulos de ventanas, teclas ni datos personales.
 
 ## Privacidad
 

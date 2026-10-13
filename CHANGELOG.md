@@ -4,11 +4,16 @@ All notable changes to Tabby are documented here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
-## [0.1.0-alpha.6] - 2026-10-13
+## [0.1.0-alpha.7] - 2026-10-13
 
 ### Added
 
 - **⌘Tab, window by window.** Tabby replaces the app switcher with one that lists windows, not apps: three windows of the same app are three choices. Hold ⌘ and press Tab to move (⇧Tab or the arrows go back), release ⌘ to switch, Esc cancels. ⌘Q or ⌘W closes the selected window instead of quitting the whole app. It lists every window: the ones on screen, minimized ones, windows of hidden apps and windows on other desktops (shown dimmed; picking one restores it or switches desktop). You can also point and click with the mouse. On by default; turn it off in Settings to get the standard switcher back.
+
+## [0.1.0-alpha.6] - 2026-10-13
+
+### Added
+
 - **Move to Applications.** When Tabby runs from Downloads or any other folder, the welcome tour and Settings offer a button that copies it to Applications, reopens it from there and moves the old copy to the Trash. From Applications it can launch at login, and macOS treats it as installed.
 
 ### Fixed

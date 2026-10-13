@@ -68,7 +68,7 @@ Tabby doesn't replace Mission Control: it works on top of the native one. Outsid
 - [x] **Spike 0:** validate the macOS capabilities Tabby relies on
 - [x] **Mission Control by keyboard:** Tab, ⇧Tab and Return, the lift effect, desktop switches, Settings and the welcome tour
 - [x] **Move the selected window to another desktop** with ⌘1…⌘9
-- [x] **⌘Tab, window by window**, with ⌘Q closing just the selected window (0.1.0-alpha.6)
+- [x] **⌘Tab, window by window**, with ⌘Q closing just the selected window (0.1.0-alpha.7)
 - [x] **Move to Applications** from the welcome tour (0.1.0-alpha.6)
 - [ ] **v0.1.0:** first stable release, after a round of real-world use
 - [ ] Arrow-key navigation based on the thumbnails' positions
@@ -91,17 +91,38 @@ Tabby is free and isn't notarized by Apple, which requires a paid developer acco
 2. Open **System Settings → Privacy & Security** and scroll down to **Security**. You'll see *"Tabby" was blocked to protect your Mac.*
 3. Click **Open Anyway**.
 4. macOS asks again: click **Open Anyway**.
-5. Enter your password or use Touch ID. If no prompt shows up, check your other display: it sometimes opens there.
+5. Enter your password or use Touch ID. **On a Mac with Touch ID, rest your finger on the sensor even if you see no dialog:** the request can wait silently, especially with an external display. Otherwise check your other display.
 6. **If Tabby's icon doesn't appear in the menu bar after a few seconds, quit the stuck copy and open Tabby again.** The copy you opened before approving stays frozen, and macOS keeps sending every new double-click to it. Open **Activity Monitor**, select **Tabby**, click **ⓧ** → **Force Quit**, and open Tabby again. Your approval is already saved, so this time it starts right away. (Terminal: `pkill -9 Tabby; open ~/Downloads/Tabby.app`.)
 
 Tabby opens, its icon appears in the menu bar, and a short welcome tour guides you through the **Accessibility** permission and a first try. You only do this once, although a new version downloaded from the internet may ask again.
 
-### If Tabby still doesn't open
+## Troubleshooting
 
-- **Nothing happens after Open Anyway:** the password or Touch ID request may be waiting on another display or on another desktop. Open Mission Control to find it.
-- **Double-clicking Tabby does nothing:** a copy is stuck waiting for that approval. Force quit it as in step 6 and open Tabby again. If macOS blocks it again, go through the steps above once more.
-- **There's no Open Anyway button:** it's only there for about an hour after macOS blocks Tabby. Open Tabby again so that macOS blocks it, and go back to **Privacy & Security**.
-- **You have several copies of Tabby:** keep only the one in **Applications** and delete the rest, including the zip, so you always open the same one.
+**macOS says it couldn't verify Tabby.** That's expected: Tabby isn't notarized by Apple. Click **Done** and follow the steps above (Privacy & Security → Open Anyway).
+
+**I clicked Open Anyway and nothing happens. Activity Monitor shows Tabby at 0 % CPU.** macOS is waiting for your approval and the request can be silent: on a Mac with Touch ID, rest your finger on the sensor; with an external display, look at the other screen. If it stays stuck, the copy you opened before approving is frozen: force quit Tabby in **Activity Monitor** and open it again; your approval is already saved. In Terminal: `pkill -9 Tabby; open ~/Downloads/Tabby.app`. If it still won't start, the Gatekeeper service itself got stuck: run `sudo killall syspolicyd` in Terminal, then open Tabby again.
+
+**Double-clicking Tabby does nothing.** Same cause as above: a frozen copy is catching every click. Force quit it and open Tabby again.
+
+**There's no Open Anyway button.** It's only there for about an hour after macOS blocks Tabby. Open Tabby again so macOS blocks it, then go back to Privacy & Security.
+
+**Tabby is in the menu bar, but nothing happens in Mission Control.** Tabby needs the Accessibility permission. **Settings → General** shows whether it's granted; grant it in **System Settings → Privacy & Security → Accessibility**. If Tabby is listed there and still doesn't work (common after replacing the app), turn its switch off and on again. **Diagnostics…** in the menu shows exactly what Tabby sees.
+
+**⌘Tab still shows the standard app switcher.** Check that **Settings → General → "⌘Tab shows windows, not apps"** is on, that Tabby is enabled, and that it has Accessibility (the switcher uses the same keyboard access as Mission Control). Inside Mission Control, ⌘Tab stays native on purpose. In password fields (Secure Input) macOS blocks every keyboard tool, Tabby included.
+
+**The selected window doesn't lift, or ⌘Tab shows icons instead of thumbnails.** Both need the optional Screen Recording permission: **Settings → General → Allow Screen Recording**. Without it, Tabby works with a plain highlight and app icons.
+
+**"Launch at login" is greyed out.** Tabby is running from Downloads or another folder. Use **Settings → General → Move to Applications**, or drag Tabby.app to Applications with the Finder and open it again.
+
+**⌘1…⌘9 says the window is on all desktops.** That app is assigned to every desktop in macOS: right-click its Dock icon → **Options → Assign To → None**.
+
+**I switched desktops inside Mission Control and the list looked wrong for a moment.** Tabby waits until macOS finishes the switch (about a second) before rebuilding the list; keys you press meanwhile are applied once it's ready. If it stays wrong, open an issue with the Diagnostics report.
+
+**Tabby asked to be approved again after an update.** Every download goes through Gatekeeper once. Your permissions are kept, because every version is signed with the same certificate. On a Mac that never shows the approval prompt, you can skip Gatekeeper for the new copy before opening it: `find ~/Downloads/Tabby.app -print0 | xargs -0 xattr -d com.apple.quarantine`.
+
+**You have several copies of Tabby.** Keep only the one in Applications and delete the rest, including the zip, so you always open the same one.
+
+**How do I report a problem?** **Diagnostics…** in the menu → **Copy Report** → paste it in a [new issue](../../issues/new). The report has no window titles, keystrokes or personal data.
 
 ## Privacy
 
