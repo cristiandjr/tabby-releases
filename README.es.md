@@ -37,11 +37,14 @@ Mission Control muestra todas tus ventanas abiertas de un vistazo, pero para ele
 
 <p align="center">
   <kbd>⌃</kbd> <kbd>↑</kbd> &nbsp;➜&nbsp; <kbd>Tab</kbd> <kbd>Tab</kbd> &nbsp;➜&nbsp; <kbd>Enter ↩</kbd>
+  <br>
+  <sub><kbd>Tab</kbd> &nbsp;➜&nbsp; <kbd>⌘</kbd> <kbd>2</kbd> &nbsp;manda la ventana seleccionada al Escritorio 2</sub>
 </p>
 
 1. **Abre Mission Control** como siempre: atajo de teclado, F3, gesto del trackpad o esquina activa.
 2. **Presiona <kbd>Tab</kbd>** para recorrer tus ventanas, empezando por la más reciente. <kbd>⇧</kbd> <kbd>Tab</kbd> vuelve atrás.
 3. **Presiona <kbd>Enter ↩</kbd>**: Mission Control se cierra y esa ventana exacta pasa al frente.
+4. **O presiona <kbd>⌘</kbd> + un número**: <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> manda la ventana seleccionada a ese escritorio y, si no existe, lo crea. Mission Control sigue abierto, así sigues ordenando.
 
 Tabby no reemplaza Mission Control ni dibuja su propio selector: funciona encima del nativo.
 

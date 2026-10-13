@@ -37,11 +37,14 @@ Mission Control shows all your open windows at a glance, but choosing one still 
 
 <p align="center">
   <kbd>⌃</kbd> <kbd>↑</kbd> &nbsp;➜&nbsp; <kbd>Tab</kbd> <kbd>Tab</kbd> &nbsp;➜&nbsp; <kbd>Return ↩</kbd>
+  <br>
+  <sub><kbd>Tab</kbd> &nbsp;➜&nbsp; <kbd>⌘</kbd> <kbd>2</kbd> &nbsp;sends the selected window to Desktop 2</sub>
 </p>
 
 1. **Open Mission Control** the way you always do: keyboard shortcut, F3, trackpad gesture or hot corner.
 2. **Press <kbd>Tab</kbd>** to move through your windows, most recent first. <kbd>⇧</kbd> <kbd>Tab</kbd> goes back.
 3. **Press <kbd>Return ↩</kbd>**: Mission Control closes and that exact window comes to the front.
+4. **Or press <kbd>⌘</kbd> + a number**: <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> sends the selected window to that desktop, creating it if it doesn't exist yet. Mission Control stays open, so you can keep sorting.
 
 Tabby doesn't replace Mission Control or draw its own switcher. It works on top of the native one.
 
