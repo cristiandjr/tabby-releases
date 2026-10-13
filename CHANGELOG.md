@@ -4,6 +4,16 @@ All notable changes to Tabby are documented here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.1.0-alpha.6] - 2026-10-13
+
+### Added
+
+- **Move to Applications.** When Tabby runs from Downloads or any other folder, the welcome tour and Settings offer a button that copies it to Applications, reopens it from there and moves the old copy to the Trash. From Applications it can launch at login, and macOS treats it as installed.
+
+### Fixed
+
+- Launch at login stays on after moving Tabby to another folder: the login item is registered again from the new location.
+
 ## [0.1.0-alpha.5] - 2026-10-11
 
 ### Changed
