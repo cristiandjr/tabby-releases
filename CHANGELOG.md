@@ -4,6 +4,13 @@ All notable changes to Tabby are documented here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.1.0-alpha.8] - 2026-10-13
+
+### Fixed
+
+- ⌘Tab lists windows by most recent use, like the native switcher: after going to C and then to A, the order is A, C, B. Before, Tabby used the stacking order, and macOS moves every window of an app at once.
+- The switcher panel no longer flashes when it appears.
+
 ## [0.1.0-alpha.7] - 2026-10-13
 
 ### Added
