@@ -1,0 +1,51 @@
+Tabby License
+
+Copyright (c) 2026 cristiandjr. All rights reserved.
+
+This license covers Tabby ("the Software") from version 0.1.0-alpha.5 on. Versions up to and including 0.1.0-alpha.4 were published under the MIT License, and that license keeps applying to those versions and nothing else.
+
+1. What you may do
+
+You may download, install and use the Software, in the compiled form distributed by the copyright holder, free of charge, for any purpose, personal or commercial, on any number of Macs. You may also share the link to the official download page with anyone.
+
+2. What you may not do
+
+Except as expressly allowed above or by law that cannot be waived by contract, you may not:
+
+(a) copy, modify, translate, adapt or create derivative works of the Software or of its source code;
+(b) distribute, publish, sublicense, rent, lease, sell or otherwise make the Software available to third parties, in whole or in part;
+(c) reverse engineer, decompile, disassemble or otherwise attempt to derive the source code of the Software, except to the extent that applicable law expressly permits it despite this restriction;
+(d) remove or alter any copyright, trademark or other proprietary notice in the Software;
+(e) use the Software, its source code or any part of them to build a competing or derivative product.
+
+3. Source code
+
+Any source code of the Software that the copyright holder may make available, in any form and at any time, is provided for reference only and stays subject to this license. No right to the source code is granted. Commercial licenses for the source code can be requested from the copyright holder.
+
+4. Name, logo and icon
+
+"Tabby", the Tabby logo and the Tabby icon identify the Software and its author. You may not use them to present yourself as the developer, publisher or official distributor of the Software, nor in any way that suggests endorsement by the copyright holder.
+
+5. Third-party software
+
+The Software only uses frameworks that Apple provides with macOS. It does not include third-party open source code.
+
+6. Updates
+
+The copyright holder may publish updates of the Software under this license or under another one. This license does not oblige the copyright holder to publish updates or to provide support.
+
+7. No warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+8. Limitation of liability
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW.
+
+9. Termination
+
+This license ends automatically if you breach any of its terms. When it ends, you must stop using the Software and delete every copy you have.
+
+10. Governing law
+
+This license is governed by the laws of the Argentine Republic, without regard to its conflict of law rules, to the extent that the mandatory consumer protection laws of your country do not provide otherwise.
