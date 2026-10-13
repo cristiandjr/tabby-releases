@@ -66,11 +66,14 @@ Tabby no reemplaza Mission Control: funciona encima del nativo. Fuera de Mission
 ## Hoja de ruta
 
 - [x] **Spike 0:** validar las capacidades de macOS que necesita Tabby
-- [x] **v0.1.0-alpha.1:** app de barra de menús con Tab, ⇧Tab y Enter, efecto de agrandar, escritorios y Configuración
-- [ ] **v0.1.0:** primera versión estable
+- [x] **Mission Control con el teclado:** Tab, ⇧Tab y Enter, efecto de agrandar, cambio de escritorio, Configuración y bienvenida
+- [x] **Mover la ventana seleccionada a otro escritorio** con ⌘1…⌘9
+- [x] **⌘Tab ventana por ventana**, con ⌘Q cerrando solo la ventana seleccionada (0.1.0-alpha.6)
+- [x] **Mover a Aplicaciones** desde la bienvenida (0.1.0-alpha.6)
+- [ ] **v0.1.0:** primera versión estable, después de una ronda de uso real
 - [ ] Navegación con flechas según la posición de las miniaturas
-- [x] Mover la ventana seleccionada a otro escritorio con un atajo
 - [ ] Atajos numéricos (1–9) y búsqueda de ventanas
+- [ ] Extras del selector: atajo configurable (⌥Tab), ⌘` para las ventanas de la misma app
 
 ## Descarga
 

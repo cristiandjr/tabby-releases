@@ -66,11 +66,14 @@ Tabby doesn't replace Mission Control: it works on top of the native one. Outsid
 ## Roadmap
 
 - [x] **Spike 0:** validate the macOS capabilities Tabby relies on
-- [x] **v0.1.0-alpha.1:** menu bar app with Tab, ⇧Tab and Return, lift effect, desktops and Settings
-- [ ] **v0.1.0:** first stable release
+- [x] **Mission Control by keyboard:** Tab, ⇧Tab and Return, the lift effect, desktop switches, Settings and the welcome tour
+- [x] **Move the selected window to another desktop** with ⌘1…⌘9
+- [x] **⌘Tab, window by window**, with ⌘Q closing just the selected window (0.1.0-alpha.6)
+- [x] **Move to Applications** from the welcome tour (0.1.0-alpha.6)
+- [ ] **v0.1.0:** first stable release, after a round of real-world use
 - [ ] Arrow-key navigation based on the thumbnails' positions
-- [x] Move the selected window to another desktop with a shortcut
 - [ ] Number shortcuts (1–9) and window search
+- [ ] Window switcher extras: a configurable shortcut (⌥Tab), ⌘` for the windows of the same app
 
 ## Download
 
