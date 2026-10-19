@@ -1,0 +1,35 @@
+name: Bug report
+description: Something in Tabby doesn't work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Tabby better. Mission Control behaves differently depending on the macOS version, the number of displays and whether each display has its own Spaces, so those details matter.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics report
+      description: In Tabby's menu, Diagnostics… → Copy Report, then paste it here. It includes your macOS version and displays, and has no window titles, keystrokes or personal data.
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: separate-spaces
+    attributes:
+      label: Displays have separate Spaces
+      description: System Settings → Desktop & Dock → Mission Control. Newer versions of Tabby include it in the Diagnostics report.
+      options:
+        - "On (macOS default)"
+        - "Off"
+        - "I use a single display"
+        - "I don't know"
+    validations:
+      required: false

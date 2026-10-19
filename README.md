@@ -31,6 +31,9 @@
 > [!NOTE]
 > Tabby is in alpha: it works every day on the author's Mac, but expect rough edges. Bug reports are very welcome.
 
+> [!TIP]
+> **Your shortcuts stay yours.** Tabby only takes Tab, Return and <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> while Mission Control is open, so Safari, Chrome and Finder keep theirs. <kbd>⌘</kbd><kbd>Tab</kbd> belongs to Tabby only while the window switcher is on (you can turn it off in Settings), and <kbd>⌘</kbd><kbd>Q</kbd> closes a single window only while that switcher is on screen.
+
 ## What is Tabby?
 
 Mission Control shows all your open windows at a glance, but choosing one still means reaching for the mouse or the trackpad. **Tabby lets you do it with the keyboard**, the same way you use ⌘Tab.
@@ -55,8 +58,8 @@ Tabby doesn't replace Mission Control: it works on top of the native one. Outsid
 | ⌨️ **Keyboard first** | Tab, ⇧Tab and Return inside Mission Control, most recent window first. |
 | 🎯 **The exact window** | Focuses the window you picked, even when several windows belong to the same app. |
 | ✨ **See where you are** | The selected window lifts slightly with a soft spring and settles back when you move on. |
-| 🗂️ **Send it to a desktop** | <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> moves the selected window to that desktop, creating it if it doesn't exist yet. |
-| 🪟 **⌘Tab, window by window** | Tabby's app switcher lists windows, not apps. Hold ⌘, press Tab, release to switch. <kbd>⌘</kbd><kbd>Q</kbd> closes just the selected window. Turn it off in Settings if you prefer the standard one. |
+| 🗂️ **Send it to a desktop** | <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> moves the selected window to that desktop, creating it if it doesn't exist yet. Only inside Mission Control: everywhere else ⌘1…⌘9 keep doing what they always do. |
+| 🪟 **⌘Tab, window by window** | Tabby's app switcher lists windows, not apps. Hold ⌘, press Tab, release to switch. <kbd>⌘</kbd><kbd>Q</kbd> closes just the selected window while the switcher is open; elsewhere it quits apps as always. Turn it off in Settings if you prefer the standard one. |
 | ⚙️ **Your shortcuts** | Change every shortcut in Settings. |
 | 🪄 **However you open it** | Shortcut, F3, trackpad gesture or hot corner: Tabby doesn't depend on any of them. |
 | 🍎 **Native** | Swift, SwiftUI and AppKit. A tiny menu bar app that stays out of your way. |
@@ -122,7 +125,7 @@ Tabby opens, its icon appears in the menu bar, and a short welcome tour guides y
 
 **You have several copies of Tabby.** Keep only the one in Applications and delete the rest, including the zip, so you always open the same one.
 
-**How do I report a problem?** **Diagnostics…** in the menu → **Copy Report** → paste it in a [new issue](../../issues/new). The report has no window titles, keystrokes or personal data.
+**How do I report a problem?** Open a [bug report](../../issues/new/choose) and paste the Diagnostics report (**Diagnostics…** in the menu → **Copy Report**). It includes what Mission Control's behavior depends on: your macOS version, your displays and whether they have separate Spaces. It has no window titles, keystrokes or personal data.
 
 ## Privacy
 

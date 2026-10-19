@@ -31,6 +31,9 @@
 > [!NOTE]
 > Tabby está en alfa: funciona todos los días en la Mac de su autor, pero puede tener detalles. Los reportes de errores son muy bienvenidos.
 
+> [!TIP]
+> **Tus atajos siguen siendo tuyos.** Tabby solo toma Tab, Enter y <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> mientras Mission Control está abierto, así que Safari, Chrome y el Finder conservan los suyos. <kbd>⌘</kbd><kbd>Tab</kbd> es de Tabby solo mientras el selector de ventanas está activado (se puede apagar en Settings), y <kbd>⌘</kbd><kbd>Q</kbd> cierra una sola ventana solo mientras ese selector está en pantalla.
+
 ## ¿Qué es Tabby?
 
 Mission Control muestra todas tus ventanas abiertas de un vistazo, pero para elegir una todavía tienes que ir al mouse o al trackpad. **Tabby te permite hacerlo con el teclado**, igual que con ⌘Tab.
@@ -55,8 +58,8 @@ Tabby no reemplaza Mission Control: funciona encima del nativo. Fuera de Mission
 | ⌨️ **Primero el teclado** | Tab, ⇧Tab y Enter dentro de Mission Control, empezando por la ventana más reciente. |
 | 🎯 **La ventana exacta** | Enfoca la ventana que elegiste, aunque haya varias de la misma app. |
 | ✨ **Sabes dónde estás** | La ventana seleccionada se levanta un poco con un resorte suave y vuelve a su lugar al pasar a otra. |
-| 🗂️ **Mándala a un escritorio** | <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> mueve la ventana seleccionada a ese escritorio y, si todavía no existe, lo crea. |
-| 🪟 **⌘Tab, ventana por ventana** | El selector de apps de Tabby muestra ventanas, no apps. Mantén ⌘, presiona Tab, suelta para cambiar. <kbd>⌘</kbd><kbd>Q</kbd> cierra solo la ventana seleccionada. Desactívalo en Settings si prefieres el estándar. |
+| 🗂️ **Mándala a un escritorio** | <kbd>⌘</kbd><kbd>1</kbd>…<kbd>⌘</kbd><kbd>9</kbd> mueve la ventana seleccionada a ese escritorio y, si todavía no existe, lo crea. Solo dentro de Mission Control: en cualquier otro lado ⌘1…⌘9 siguen funcionando como siempre. |
+| 🪟 **⌘Tab, ventana por ventana** | El selector de apps de Tabby muestra ventanas, no apps. Mantén ⌘, presiona Tab, suelta para cambiar. <kbd>⌘</kbd><kbd>Q</kbd> cierra solo la ventana seleccionada mientras el selector está abierto; en cualquier otro momento cierra apps como siempre. Desactívalo en Settings si prefieres el estándar. |
 | ⚙️ **Tus atajos** | Cambia cualquier atajo en **Settings**. |
 | 🪄 **Como sea que lo abras** | Atajo, F3, gesto o esquina activa: Tabby no depende de ninguno. |
 | 🍎 **Nativa** | Swift, SwiftUI y AppKit. Una app mínima en la barra de menús que no estorba. |
@@ -122,7 +125,7 @@ Tabby se abre, su ícono aparece en la barra de menús y una bienvenida corta te
 
 **Tienes varias copias de Tabby.** Deja solo la de Aplicaciones y borra las demás, también el zip, así siempre abres la misma.
 
-**¿Cómo reporto un problema?** **Diagnostics…** en el menú → **Copy Report** → pégalo en un [issue nuevo](../../issues/new). El reporte no tiene títulos de ventanas, teclas ni datos personales.
+**¿Cómo reporto un problema?** Abre un [reporte de error](../../issues/new/choose) y pega el reporte de Diagnóstico (**Diagnostics…** en el menú → **Copy Report**). Incluye lo que cambia el comportamiento de Mission Control: tu versión de macOS, tus pantallas y si tienen espacios separados. No tiene títulos de ventanas, teclas ni datos personales.
 
 ## Privacidad
 

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Troubleshooting
+    url: https://cristiandjr.vercel.app/tabby#faq
+    about: Most first-launch problems (Gatekeeper, permissions, ⌘Tab) are solved here.

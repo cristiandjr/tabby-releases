@@ -4,6 +4,12 @@ All notable changes to Tabby are documented here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.1.0-alpha.9] - 2026-10-17
+
+### Added
+
+- The Diagnostics report says whether displays have separate Spaces, which changes how Mission Control behaves.
+
 ## [0.1.0-alpha.8] - 2026-10-13
 
 ### Fixed
