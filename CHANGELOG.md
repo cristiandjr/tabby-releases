@@ -4,6 +4,17 @@ All notable changes to Tabby are documented here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
+## [0.1.0-alpha.10] - 2026-10-20
+
+### Fixed
+
+- ⌘Tab could stop responding after macOS switched Tabby's keyboard listener off, which it does on its own after some user input. Tabby now switches it back on right away; before, it only came back after opening Mission Control.
+- Releasing ⌘ while the switcher panel was still opening no longer leaves the panel open: the choice is applied as soon as the panel is ready.
+
+### Changed
+
+- The Diagnostics report counts how many times macOS switched the keyboard listener off ("tap disabled by input"), and the main switcher and Mission Control events stay in the system log, so a bug report can be checked against it. The log also says when ⌘Tab finds no windows and when Secure Input (a focused password field) is hiding the keyboard from Tabby, which sends ⌘Tab to the standard switcher.
+
 ## [0.1.0-alpha.9] - 2026-10-17
 
 ### Added
